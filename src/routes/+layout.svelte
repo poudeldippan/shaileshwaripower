@@ -87,11 +87,11 @@
 		<div>
 			<strong>Quick Links</strong>
 			<p><a href="/">Home</a></p>
-			<p><a href="/About/about-us">About Us</a></p>
-			<p><a href="/Project/overview">Project</a></p>
-			<p><a href="/Gallery">Gallery</a></p>
-			<p><a href="/Downloads">Downloads</a></p>
-			<p><a href="/Contact">Contact</a></p>
+			<p><a href="/about/about-us">About Us</a></p>
+			<p><a href="/project/overview">Project</a></p>
+			<p><a href="/gallery">Gallery</a></p>
+			<p><a href="/downloads">Downloads</a></p>
+			<p><a href="/contact">Contact</a></p>
 		</div>
 
 		<div>

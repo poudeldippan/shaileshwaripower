@@ -30,7 +30,7 @@
 		<li><strong>Annual Energy Generation:</strong> 8.42 GWh</li>
 	</ul>
 
-	<img class="map" src="/project/map1.jpg" alt="Project Location Map">
+	<img class="map" src="/gallery/19.png" alt="Project Location Map">
 
 
 
@@ -114,7 +114,7 @@
 	</table>
 
 
-	<img class="map" src="/project/map2.jpg" alt="Project Area Map">
+	<img class="map" src="/gallery/26.png" alt="Project Area Map">
 
 
 

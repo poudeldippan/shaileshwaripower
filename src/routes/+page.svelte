@@ -5,17 +5,20 @@
 		{
 			title: "Generating 8.42 GWh Energy",
 			text: "with 1.55 MW Hydropower Project",
-			img: "/gallery/4.png"
+			img: "/gallery/4.png",
+			link: "/project/overview"
 		},
 		{
 			title: "Clean & Sustainable Energy",
 			text: "Supporting Nepal’s Growing Power Demand",
-			img: "/gallery/5.png"
+			img: "/gallery/5.png",
+			link: "/about/about-us"
 		},
 		{
 			title: "Powering Local Development",
 			text: "Responsible Private Investment in Hydropower",
-			img: "gallery/8.png"
+			img: "gallery/8.png",
+			link: "/about/vision-mission"
 		}
 	];
 
@@ -54,7 +57,8 @@
 			<h1>{slides[slide].title}</h1>
 			<p>{slides[slide].text}</p>
 
-			<button class="btn blue">Learn More</button>
+			<a class="btn blue" href={slides[slide].link}>Learn More</a>
+
 		</div>
 
 		<button class="arrow" on:click={slidenext}>❯</button>
@@ -84,7 +88,7 @@
 			</p>
 
 			<div class="right">
-				<button class="btn red">Learn More</button>
+				<button class="btn red" href="/about/about-us">Learn More</button>
 			</div>
 		</div>
 	</div>
@@ -108,7 +112,8 @@
 				2.01 m³/s.
 			</p>
 
-			<button class="btn red">Learn More</button>
+			<a class="btn red" href="/project/salient-features">Learn More</a>
+
 		</div>
 
 		<img src="gallery/25.png">
@@ -242,7 +247,7 @@
 			<p>📧 info@shaileshwaripower.com</p>
 
 			<iframe width="100%" height="260"
-			src="https://maps.google.com/maps?q=kathmandu&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+			src="https://maps.google.com/maps?q=shankhamul%20kathmandu&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe>
 		</div>
 
 		<form>
