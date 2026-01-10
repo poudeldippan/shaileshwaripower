@@ -1,0 +1,272 @@
+/* =========================================================
+   GLOBAL RESET + RESPONSIVE FOUNDATION
+   File: src/app.css
+   ========================================================= */
+
+/* Base reset */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Make media always fit container */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Prevent long words/urls breaking layout */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: anywhere;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Buttons + inputs */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* =========================================================
+   CONTAINER HELPERS
+   ========================================================= */
+.wrap,
+.container {
+  width: 100%;
+  max-width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* =========================================================
+   COMMON LAYOUT FIXES
+   ========================================================= */
+
+/* Your pages use .row a lot (image + text side-by-side).
+   This will prevent overflow and improve mobile stacking. */
+.row {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.row img {
+  width: 45%;
+  border-radius: 12px;
+}
+
+/* Right align helper */
+.right {
+  text-align: right;
+}
+
+/* =========================================================
+   HOME PAGE ELEMENTS (hero / slider / facts / gallery / chair)
+   ========================================================= */
+
+/* HERO / SLIDER */
+.hero {
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Facts grid */
+.facts {
+  display: grid;
+  gap: 20px;
+}
+
+/* Gallery grid (global default safe style) */
+.gallery {
+  display: grid;
+  gap: 12px;
+}
+
+/* Lightbox safe default */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+}
+
+/* Chairman section safe layout */
+.chair {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+}
+
+/* =========================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================= */
+
+/* -----------------------------
+   TABLET and below (<= 900px)
+------------------------------ */
+@media (max-width: 900px) {
+  /* stack sections */
+  .row {
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+  }
+
+  .row img {
+    width: 100%;
+  }
+
+  .right {
+    text-align: left;
+  }
+
+  /* Hero text scaling (works with your classes) */
+  .center h1 {
+    font-size: 26px !important;
+    line-height: 1.2;
+  }
+
+  .center p {
+    font-size: 14px !important;
+  }
+
+  /* facts: 4 cols -> 2 cols */
+  .facts {
+    grid-template-columns: repeat(2, 1fr) !important;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* values (core values cards): row -> column */
+  .values {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  /* chairman section: row -> column */
+  .chair {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px !important;
+  }
+
+  .chair-img {
+    width: 240px !important;
+    height: 240px !important;
+  }
+
+  /* gallery grid: 4 cols -> 2 cols */
+  .gallery {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* contact section: 2 cols -> 1 col */
+  .contact {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* -----------------------------
+   MOBILE (<= 500px)
+------------------------------ */
+@media (max-width: 500px) {
+  /* Wrap spacing smaller */
+  .wrap,
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  /* hero scaling */
+  .hero {
+    height: 280px !important;
+  }
+
+  .center h1 {
+    font-size: 22px !important;
+  }
+
+  .center p {
+    font-size: 13px !important;
+  }
+
+  /* buttons smaller */
+  .btn {
+    padding: 9px 18px !important;
+    font-size: 14px !important;
+  }
+
+  /* facts -> 1 col */
+  .facts {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* gallery -> 1 col */
+  .gallery {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* lightbox adjustments */
+  .lightbox {
+    padding: 15px !important;
+  }
+
+  .nav {
+    font-size: 34px !important;
+  }
+
+  .close {
+    top: 10px !important;
+    right: 15px !important;
+    font-size: 40px !important;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY / CLICK HELPERS
+   ========================================================= */
+.card,
+.thumb,
+.gallery img {
+  -webkit-tap-highlight-color: transparent;
+}
