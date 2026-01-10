@@ -5,17 +5,17 @@
 		{
 			title: "Generating 8.42 GWh Energy",
 			text: "with 1.55 MW Hydropower Project",
-			img: "https://images.unsplash.com/photo-1604446062883-c6f09e6c1d58?w=1400"
+			img: "/gallery/4.png"
 		},
 		{
 			title: "Clean & Sustainable Energy",
 			text: "Supporting Nepal’s Growing Power Demand",
-			img: "https://images.unsplash.com/photo-1509395176047-4a66953fd231?w=1400"
+			img: "/gallery/5.png"
 		},
 		{
 			title: "Powering Local Development",
 			text: "Responsible Private Investment in Hydropower",
-			img: "https://images.unsplash.com/photo-1482192505345-5655af888cc4?w=1400"
+			img: "gallery/8.png"
 		}
 	];
 
@@ -25,14 +25,14 @@
 
 	/* ================= GALLERY ================= */
     let images = [
-		"https://picsum.photos/600?1",
-		"https://picsum.photos/600?2",
-		"https://picsum.photos/600?3",
-		"https://picsum.photos/600?4",
-		"https://picsum.photos/600?5",
-		"https://picsum.photos/600?6",
-		"https://picsum.photos/600?7",
-		"https://picsum.photos/600?8"
+		"gallery/1.png",
+		"gallery/2.png",
+		"gallery/12.png",
+		"gallery/13.png",
+		"gallery/15.png ",
+		"gallery/29.png",
+		"gallery/37.png",
+		"gallery/36.png"
 	];
 
 	let show = false;
@@ -69,7 +69,7 @@
 	<h2>Who Are We?</h2>
 
 	<div class="row">
-		<img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?w=1200">
+		<img src="gallery/23.png">
 
 		<div>
 			<p>
@@ -111,7 +111,7 @@
 			<button class="btn red">Learn More</button>
 		</div>
 
-		<img src="https://images.unsplash.com/photo-1521207418485-99c705420785?w=800">
+		<img src="gallery/25.png">
 	</div>
 </section>
 
@@ -161,17 +161,17 @@
     <div class="values">
 
         <div class="value"
-            style="background-image:url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900')">
+            style="background-image:url('gallery/31.png')">
             Identification of Potential Location to Develop Hydropower
         </div>
 
         <div class="value"
-            style="background-image:url('https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?w=900')">
+            style="background-image:url('gallery/32.png')">
             Develop Hydropower Contributing Independence of Power
         </div>
 
         <div class="value"
-            style="background-image:url('https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=900')">
+            style="background-image:url('gallery/35.png')">
             Deep Involvement of Private Entrepreneurship
         </div>
 
@@ -183,7 +183,7 @@
 <!-- ================= CHAIRMAN ================= -->
 <section class="chair">
 
-    <img class="chair-img" src="https://randomuser.me/api/portraits/men/32.jpg">
+    <img class="chair-img" src="team/Picture10.png">
 
     <div class="glass">
         <h3>MR. Lal Bahadur Bam</h3>
@@ -204,11 +204,14 @@
 <section class="wrap">
     <h2>Gallery</h2>
 
-    <div class="gallery">
-        {#each images as img, i}
-            <img src={img} on:click={()=>open(i)}>
-        {/each}
-    </div>
+   <div class="gallery">
+    {#each images as img, i}
+        <div class="thumb" on:click={() => open(i)}>
+            <img src={img} alt={`Gallery image ${i + 1}`} />
+        </div>
+    {/each}
+</div>
+
 </section>
 
 
@@ -418,8 +421,8 @@
 }
 
 .chair-img{
-    width:420px;
-    height:420px;
+    width:300px;
+    height:300x;
     object-fit:cover;
     border-radius:50%;
 }
@@ -433,11 +436,39 @@
 
 
 /* ================= FIXED GALLERY ================= */
+/* ================= FIXED GALLERY GRID ================= */
 .gallery{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:12px;
 }
+
+/* fixed box */
+.thumb{
+    position:relative;
+    width:100%;
+    aspect-ratio: 4 / 3;   /* 🔥 uniform box */
+    overflow:hidden;
+    border-radius:10px;
+    cursor:pointer;
+    background:#eee;
+}
+
+/* image fills box */
+.thumb img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;     /* 🔥 this is the key */
+    transition:transform .3s ease;
+}
+
+/* hover effect */
+.thumb:hover img{
+    transform:scale(1.05);
+}
+
 
 .gallery img{
     width:100%;

@@ -6,37 +6,37 @@
 		{
 			name: "Mr. Lal Bahadur Bam",
 			role: "Chairman",
-			img: "/people/chairman.jpg",
+			img: "/team/Picture10.png",
 			details: `
 				Chairman of Shaileshwari Power Nepal Ltd.<br>
-				Experienced leader in hydropower and infrastructure projects.
+				Major Involvement: Construction Sector Proprietor of LB & AB Builders Pvt. Ltd. Experience on Construction of Roads, Bridges & Buildings, etc. Experience of Construction of 33 kV and 11 kV Transmission Line, etc. Founder of Sudur Paschimanchal Campus, Dhangadhi
 			`
 		},
 		{
 			name: "Mr. Jagadish Bahadur Pal",
 			role: "Managing Director",
-			img: "/people/jagadish.jpg",
+			img: "/team/Picture11.png",
 			details: `
-				Managing Director with extensive management and corporate expertise.
+				Former Chairperson: Api Power Company Ltd. (10 years) Founder Chairperson: Trikal Power Company Pvt. Ltd. (Currently) Former Chairman: Sudurpaschhim Development Commission (GoN)
 			`
 		},
 		{
 			name: "Mr. Dilip Singh Budhathoki",
 			role: "Director",
-			img: "/people/dilip.jpg",
-			details: `Director of the company.`
+			img: "/team/Picture12.png",
+			details: `Former Chairman of Byans Rural Municipality, Darchula Proprietor of Thiyal Traders, Darchula (business of valuable medicinal herbs; Yarsagumba, Chiraito, Silajit, etc.)`
 		},
 		{
 			name: "Mr. Bhim Raj Kapadi",
 			role: "Director",
-			img: "/people/bhim.jpg",
-			details: `Director of the company.`
+			img: "/team/Picture14.png",
+			details: `Proprietor: Lalu Hardware Pvt. Ltd., Mahendranagar, Dhangadhi, Attariya Proprietor: Lalu Traders & Suppliers, Attariya, Kailali Proprietor: Lalu Smart Energy Station, Attariya, Kailali Director: United Public Secondary School, Mahendranagar, Kanchanpur`
 		},
 		{
 			name: "Mr. Jay Raj Joshi",
 			role: "Director",
-			img: "/people/jay.jpg",
-			details: `Director of the company.`
+			img: "/team/Picture13.png",
+			details: `Proprietor: Yamuna Suppliers (Hardware business), Dhangadhi, Kailali Proprietor: Yamuna Nirman Sewa Dhangadhi, Kailali Board of Director: Navajeevan Cooperative Ltd., Dhangadhi, Kailali Former Chairman: Himsikhar Cooperative Founder Director: Balmiki Int’l School, Dhangadhi, Kailali Chairman: Best Center Pvt. Ltd. (a Vocational Training Centre), Dhangadhi, Kailali`
 		}
 	];
 
@@ -44,25 +44,25 @@
 		{
 			name: "Mr. Jagadish Bahadur Pal",
 			role: "Managing Director",
-			img: "/people/jagadish.jpg",
-			details: `Managing Director`
+			img: "/team/Picture11.png",
+			details: `Former Chairperson: Api Power Company Ltd. (10 years) Founder Chairperson: Trikal Power Company Pvt. Ltd. (Currently) Former Chairman: Sudurpaschhim Development Commission (GoN)`
 		},
 		{
 			name: "Mr. Lal Bahadur Dhami",
 			role: "Finance & Admin / Company Secretary",
-			img: "/people/dhami.jpg",
-			details: `Responsible for finance and administration.`
+			img: "/team/Picture15.png",
+			details: `More than 18 years working experience on Hydropower Companies/Projects`
 		},
 		{
 			name: "CA. Narayan Poudel",
 			role: "Financial Consultant",
-			img: "/people/narayan.jpg",
-			details: `Company financial consultant.`
+			img: "/team/Picture16.jpg",
+			details: `Involved in 100+ Hydro project in Nepal Founder of Finman Services`
 		},
 		{
 			name: "Mr. Bhupal Adhikari",
 			role: "Project Manager",
-			img: "/people/bhupal.jpg",
+			img: "/team/Picture17.jpg",
 			details: `Project Management Lead`
 		}
 	];
@@ -133,7 +133,9 @@
 			</div>
 		</div>
 
-		<p class="details" innerHTML={selected.details}></p>
+		<div class="details">
+	{@html selected.details}
+</div>
 
 	</div>
 </div>
