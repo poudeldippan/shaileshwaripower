@@ -24,10 +24,10 @@
 		{ name: "Downloads", link: "/downloads" }
 	];
 
-	// ✅ Mobile hamburger open/close
+	// hamburger open/close
 	let mobileOpen = false;
 
-	// ✅ Mobile dropdown open state
+	// dropdown open in mobile
 	let openDropdown = null;
 
 	function toggleMobile() {
@@ -57,35 +57,30 @@
 	<div class="container nav">
 		<div class="logo">Shaileshwari Power Nepal Ltd.</div>
 
-		<!-- ✅ Hamburger only for mobile -->
-		<button
-			class="hamburger"
-			aria-label="Toggle menu"
-			on:click={toggleMobile}
-		>
-			{mobileOpen ? "✕" : "☰"}
+		<!-- ✅ Hamburger -->
+		<button class="hamburger" on:click={toggleMobile} aria-label="Toggle menu">
+			☰
 		</button>
 
-		<ul class:menu-open={mobileOpen} class="menu">
+		<!-- ✅ Menu -->
+		<ul class="menu" class:open={mobileOpen}>
 			{#each menu as item}
 				{#if !item.children}
 					<li class:selected={$page.url.pathname === item.link}>
 						<a href={item.link} on:click={closeMobile}>{item.name}</a>
 					</li>
 				{:else}
-					<li class="dropdown">
-						<!-- Desktop hover works, Mobile click works -->
+					<li class="dropdown" class:open={openDropdown === item.name}>
 						<button
 							type="button"
 							class="trigger"
 							on:click={() => toggleDropdown(item.name)}
-							aria-expanded={openDropdown === item.name}
 						>
 							{item.name}
 							<span class="arrow">▾</span>
 						</button>
 
-						<ul class:open={openDropdown === item.name} class="dropdown-menu">
+						<ul class="dropdown-menu">
 							{#each item.children as sub}
 								<li class:selected={$page.url.pathname === sub.link}>
 									<a href={sub.link} on:click={closeMobile}>{sub.name}</a>
@@ -96,7 +91,7 @@
 				{/if}
 			{/each}
 
-			<!-- ✅ Contact button also inside menu in mobile -->
+			<!-- ✅ Mobile Contact button INSIDE menu -->
 			<li class="mobile-contact">
 				<a href="/contact" on:click={closeMobile}>
 					<button class="contact">📞 Contact Us</button>
@@ -104,8 +99,8 @@
 			</li>
 		</ul>
 
-		<!-- ✅ desktop contact button stays outside menu -->
-		<a class="desktop-contact" href="/contact">
+		<!-- ✅ Desktop Contact button OUTSIDE menu -->
+		<a href="/contact" class="desktop-contact">
 			<button class="contact">📞 Contact Us</button>
 		</a>
 	</div>
@@ -194,15 +189,6 @@
 		white-space: nowrap;
 	}
 
-	/* ✅ Hamburger button */
-	.hamburger {
-		display: none;
-		border: none;
-		background: transparent;
-		font-size: 28px;
-		cursor: pointer;
-	}
-
 	/* MENU */
 	.menu {
 		display: flex;
@@ -215,11 +201,8 @@
 
 	.menu li {
 		position: relative;
-
-		align-items: center;
 	}
 
-	/* LINKS */
 	.menu a {
 		color: #222;
 		font-weight: 500;
@@ -229,9 +212,7 @@
 		align-items: center;
 	}
 
-	/* ACTIVE */
 	.selected > a,
-	.selected > span,
 	.selected > .trigger {
 		font-weight: 700;
 		color: #083d7d;
@@ -239,13 +220,12 @@
 		padding-bottom: 3px;
 	}
 
-	/* HOVER */
 	.menu li:hover > a {
 		color: #083d7d;
 		transform: translateY(-1px);
 	}
 
-	/* Dropdown */
+	/* DROPDOWN */
 	.dropdown {
 		position: relative;
 	}
@@ -254,9 +234,9 @@
 		background: none;
 		border: none;
 		cursor: pointer;
-		display: flex;
+		display: inline-flex;
 		align-items: center;
-		gap: 5px;
+		gap: 6px;
 		color: #222;
 		font-weight: 500;
 		font-size: 16px;
@@ -282,11 +262,6 @@
 		z-index: 100;
 	}
 
-	/* Desktop dropdown by hover */
-	.dropdown:hover > .dropdown-menu {
-		display: block;
-	}
-
 	.dropdown-menu li {
 		padding: 10px 16px;
 		white-space: nowrap;
@@ -296,6 +271,13 @@
 	.dropdown-menu li:hover {
 		background: #eef4ff;
 		padding-left: 22px;
+	}
+
+	/* ✅ Desktop hover dropdown only */
+	@media (min-width: 901px) {
+		.dropdown:hover > .dropdown-menu {
+			display: block;
+		}
 	}
 
 	/* CONTACT BUTTON */
@@ -321,6 +303,16 @@
 
 	.mobile-contact {
 		display: none;
+		width: 100%;
+	}
+
+	/* HAMBURGER */
+	.hamburger {
+		display: none;
+		border: none;
+		background: transparent;
+		font-size: 28px;
+		cursor: pointer;
 	}
 
 	/* FOOTER */
@@ -354,6 +346,14 @@
 
 	/* ✅ MOBILE NAV */
 	@media (max-width: 900px) {
+		.logo {
+			font-size: 16px;
+			max-width: 220px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
 		.hamburger {
 			display: block;
 		}
@@ -363,21 +363,20 @@
 		}
 
 		.menu {
+			display: none;
 			position: absolute;
 			top: 100%;
 			left: 0;
 			right: 0;
 			background: white;
-			border-bottom: 1px solid #e6e6e6;
 			flex-direction: column;
 			align-items: flex-start;
 			padding: 16px;
 			gap: 14px;
-
-			display: none;
+			border-bottom: 1px solid #e6e6e6;
 		}
 
-		.menu.menu-open {
+		.menu.open {
 			display: flex;
 		}
 
@@ -392,11 +391,7 @@
 			font-size: 16px;
 		}
 
-		/* ✅ disable hover dropdown on mobile, only open by click */
-		.dropdown:hover > .dropdown-menu {
-			display: none;
-		}
-
+		/* ✅ dropdown in mobile: click only */
 		.dropdown-menu {
 			position: static;
 			box-shadow: none;
@@ -407,13 +402,12 @@
 			display: none;
 		}
 
-		.dropdown-menu.open {
+		.dropdown.open > .dropdown-menu {
 			display: block;
 		}
 
 		.mobile-contact {
 			display: block;
-			width: 100%;
 		}
 
 		.mobile-contact button {
@@ -424,26 +418,5 @@
 			grid-template-columns: 1fr;
 			gap: 25px;
 		}
-		/* Show only desktop contact button in desktop */
-.desktop-contact {
-  display: inline-block;
-}
-
-/* Hide mobile contact button in desktop */
-.menu .mobile-contact {
-  display: none;
-}
-
-/* ✅ Mobile view */
-@media (max-width: 900px) {
-  .desktop-contact {
-    display: none;
-  }
-
-  .menu .mobile-contact {
-    display: block;
-  }
-}
-
 	}
 </style>
