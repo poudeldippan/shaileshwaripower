@@ -5,19 +5,19 @@
 		{
 			title: "Generating 8.42 GWh Energy",
 			text: "with 1.55 MW Hydropower Project",
-			img: "/gallery/4.png",
+			img: "/gallery/1.jpeg",
 			link: "/project/overview"
 		},
 		{
 			title: "Clean & Sustainable Energy",
 			text: "Supporting Nepal’s Growing Power Demand",
-			img: "/gallery/5.png",
+			img: "/gallery/2.jpeg",
 			link: "/about/about-us"
 		},
 		{
 			title: "Powering Local Development",
 			text: "Responsible Private Investment in Hydropower",
-			img: "gallery/8.png",
+			img: "gallery/3.jpeg",
 			link: "/about/vision-mission"
 		}
 	];
@@ -73,7 +73,7 @@
 	<h2>Who Are We?</h2>
 
 	<div class="row">
-		<img src="gallery/23.png">
+		<img src="gallery/4.jpeg">
 
 		<div>
 			<p>
@@ -116,7 +116,7 @@
 
 		</div>
 
-		<img src="gallery/25.png">
+		<img src="gallery/5.jpeg">
 	</div>
 </section>
 
@@ -166,17 +166,17 @@
     <div class="values">
 
         <div class="value"
-            style="background-image:url('gallery/31.png')">
+            style="background-image:url('gallery/8.jpeg')">
             Identification of Potential Location to Develop Hydropower
         </div>
 
         <div class="value"
-            style="background-image:url('gallery/32.png')">
+            style="background-image:url('gallery/6.jpeg')">
             Develop Hydropower Contributing Independence of Power
         </div>
 
         <div class="value"
-            style="background-image:url('gallery/35.png')">
+            style="background-image:url('gallery/9.jpeg')">
             Deep Involvement of Private Entrepreneurship
         </div>
 
