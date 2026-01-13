@@ -30,11 +30,11 @@
 		</p>
 
 		<p><strong>Phone:</strong><br>
-			977 | 59125449
+			977 | 5925449
 		</p>
 
 		<p><strong>Email:</strong><br>
-			info@shaileshwaripower.com
+			saileshwori.power17@gmail.com
 		</p>
 
 		<div class="map">

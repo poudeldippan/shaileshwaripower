@@ -228,7 +228,15 @@
 	</div>
 	{/if}
 </section>
-
+<!-- 18 -->
+<section>
+	<div class="head" on:click={() => toggle(18)}>Operation status</div>
+	{#if open === 18}
+	<div class="body">
+		<p>Started</p>
+	</div>
+	{/if}
+</section>
 </div>
 
 

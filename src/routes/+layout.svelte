@@ -48,8 +48,8 @@
 <header class="topbar">
 	<div class="container bar">
 		<span>📍 KMC-31, Shankhamul</span>
-		<span>📞 977 | 59125449</span>
-		<span>📧 info@shaileshwaripower.com</span>
+		<span>📞 977 | 5925449</span>
+		<span>📧 saileshwori.power17@gmail.com</span>
 	</div>
 </header>
 
@@ -131,8 +131,8 @@
 		<div>
 			<strong>Contact</strong>
 			<p>📍 KMC-31, Shankhamul</p>
-			<p>📞 977 | 59125449</p>
-			<p>📧 info@shaileshwaripower.com</p>
+			<p>📞 977 | 5925449</p>
+			<p>📧 saileshwori.power17@gmail.com</p>
 		</div>
 	</div>
 

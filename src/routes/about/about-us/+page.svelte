@@ -313,6 +313,17 @@
                 <p>Machhapuchhre Bank Limited</p>
             </div>
         </div>
+        <!-- 18 COD -->
+        <div class="info">
+            <span class="icon">
+                <!-- Bank -->
+                <svg viewBox="0 0 24 24"><path fill="white" d="M3 9 12 3l9 6v2H3V9Zm2 4h2v6H5v-6Zm5 0h2v6H10v-6Zm5 0h2v6h-2v-6Z"/></svg>
+            </span>
+            <div>
+                <label>Commercial Operation Date</label>
+                <p>2082/07/09</p>
+            </div>
+        </div>
 
 
     </div>
