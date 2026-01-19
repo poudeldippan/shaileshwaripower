@@ -1,17 +1,17 @@
 <script>
 	// overall progress
-	const totalProgress = 95;
+	const totalProgress = 100;
 
 	const works = [
 		{ name: "Access Road", percent: 100 },
 		{ name: "Camp", percent: 100 },
 		{ name: "Construction Power", percent: 100 },
 		{ name: "Headworks (Diversion, Intake, Settling Basin etc)", percent: 100 },
-		{ name: "Hydromechanical Works", percent: 97 },
-		{ name: "Water Convenience System", percent: 95 },
-		{ name: "Electro Mechanical Works", percent: 82 },
+		{ name: "Hydromechanical Works", percent: 100 },
+		{ name: "Water Convenience System", percent: 100 },
+		{ name: "Electro Mechanical Works", percent: 100 },
 		{ name: "Powerhouse (Civil Only)", percent: 100 },
-		{ name: "Switchyard and Substation", percent: 86 }
+		{ name: "Switchyard and Substation", percent: 100 }
 	];
 </script>
 
