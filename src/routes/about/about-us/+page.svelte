@@ -336,26 +336,7 @@
 
 
 
-<!-- ================= CAPITAL ================= -->
-<section class="capital">
 
-    <h2>CAPITAL</h2>
-
-    <div class="capital-boxes">
-
-        <div class="cap">
-            <h3>Nrs. 400,000,000</h3>
-            <p>Authorized Share Capital</p>
-        </div>
-
-        <div class="cap">
-            <h3>Nrs. 250,000,000</h3>
-            <p>Issued Share Capital</p>
-        </div>
-
-    </div>
-
-</section>
 
 
 
