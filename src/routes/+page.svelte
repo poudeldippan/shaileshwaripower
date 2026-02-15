@@ -198,7 +198,7 @@
 
         <div class="value"
             style="background-image:url('gallery/6.jpeg')">
-            Develop Hydropower Contributing Independence of Power
+            Develop Hydropower Contributing Independence 
         </div>
 
         <div class="value"
