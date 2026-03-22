@@ -1,16 +1,4 @@
 <script>
-	import { onMount } from "svelte";
-	let showPopup = false;
-	onMount(()=> {
-		showPopup = true;
-
-
-	});
-	function closePopup(){
-		showPopup = false;
-	}
-
-
 	let slide = 0;
 
 	const slides = [
@@ -60,20 +48,6 @@
 
 
 <!-- ================= HERO SLIDER ================= -->
- {#if showPopup}
-<div class="popup-overlay">
-	<div class="popup-box">
-		<button class="popup-close" on:click={closePopup}>×</button>
-
-		<!-- PDF VIEW -->
-		<iframe
-			src="/popup/notice.pdf"
-			title="Important Notice"
-			frameborder="0"
-		></iframe>
-	</div>
-</div>
-{/if}
 <section class="hero" style="background-image:url({slides[slide].img})">
 	<div class="overlay">
 
@@ -312,69 +286,6 @@
 }
 
 .right{text-align:right}
-
-/* ===== POPUP OVERLAY ===== */
-.popup-overlay {
-	position: fixed;
-	inset: 0;
-	background: rgba(0, 0, 0, 0.75);
-	z-index: 9999;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 16px;
-}
-
-/* Popup container */
-.popup-box {
-	position: relative;
-	background: white;
-	width: 90%;
-	max-width: 850px;
-	height: 85vh;
-	border-radius: 14px;
-	overflow: hidden;
-	box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-}
-
-/* Close button */
-.popup-close {
-	position: absolute;
-	top: 10px;
-	right: 12px;
-	z-index: 10;
-
-	background: #083D7D;
-	color: white;
-	border: none;
-	width: 34px;
-	height: 34px;
-	border-radius: 50%;
-	font-size: 22px;
-	cursor: pointer;
-	line-height: 1;
-}
-
-.popup-close:hover {
-	background: #062c5e;
-}
-
-/* PDF iframe */
-.popup-box iframe {
-	width: 100%;
-	height: 100%;
-	border: none;
-}
-
-/* Mobile optimization */
-@media (max-width: 600px) {
-	.popup-box {
-		width: 100%;
-		height: 90vh;
-		border-radius: 10px;
-	}
-}
 
 /* HERO */
 .hero{

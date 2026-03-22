@@ -226,7 +226,7 @@
             </span>
             <div>
                 <label>Project Status</label>
-                <p>Under Construction</p>
+                <p>Completed</p>
             </div>
         </div>
 
