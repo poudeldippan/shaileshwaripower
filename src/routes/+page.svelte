@@ -243,7 +243,7 @@
 
 		<div>
 			<p>📍 KMC-31, Shankhamul</p>
-			<p>📞 977 | 59125449</p>
+			<p>📞 977 1 5925449</p>
 			<p>📧 info@shaileshwaripower.com</p>
 
 			<iframe width="100%" height="260"

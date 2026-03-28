@@ -30,7 +30,7 @@
 		</p>
 
 		<p><strong>Phone:</strong><br>
-			977 | 5925449
+			977 1 5925449
 		</p>
 
 		<p><strong>Email:</strong><br>
