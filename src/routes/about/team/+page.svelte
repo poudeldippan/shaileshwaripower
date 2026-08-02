@@ -37,6 +37,18 @@
 			role: "Director",
 			img: "/team/Picture13.png",
 			details: `Proprietor: Yamuna Suppliers (Hardware business), Dhangadhi, Kailali Proprietor: Yamuna Nirman Sewa Dhangadhi, Kailali Board of Director: Navajeevan Cooperative Ltd., Dhangadhi, Kailali Former Chairman: Himsikhar Cooperative Founder Director: Balmiki Int’l School, Dhangadhi, Kailali Chairman: Best Center Pvt. Ltd. (a Vocational Training Centre), Dhangadhi, Kailali`
+		},
+		{
+			name: "Ms. Ankita Gupta",
+			role: "Director",
+			img: "/team/Picture18.png",
+			details: `Director`
+		},
+		{
+			name: "Mr. Mohan Raj Bhatt",
+			role: "Independent Director",
+			img: "/team/Picture19.png",
+			details: `Independent Director`
 		}
 	];
 
